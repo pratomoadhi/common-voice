@@ -33,6 +33,7 @@ const {
 const COOKIE_MAX_AGE_30_DAYS = 30 * 24 * 60 * 60 * 1000
 
 export const setupAuthRouter = async () => {
+  console.log('Domain: ' + DOMAIN)
   const fxaIssuer = await Issuer.discover(DOMAIN)
   const client = new fxaIssuer.Client({
     client_id: CLIENT_ID,
